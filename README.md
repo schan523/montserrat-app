@@ -17,3 +17,7 @@ Get the necessary packages
 npm install
 npm install react-router-dom
 ```
+Use `npm run dev` in order to locally host the site to see changes as you work.
+
+# For visitors
+Follow the link in the __Deployments__ side panel.
