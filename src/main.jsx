@@ -4,6 +4,9 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './styles/index.css'
 import App from './App.jsx'
 import Database from './components/Database.jsx'
+import Home from './components/Home.jsx'
+import Updates from './components/Updates.jsx'
+import Donation from './components/Donation.jsx'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +16,18 @@ const router = createBrowserRouter([
       {
         path: 'database',
         element: <Database/>
+      },
+      {
+        index: true,
+        element: <Home/>
+      },
+      {
+        path: 'updates',
+        element: <Updates/>
+      },
+      {
+        path: 'donation',
+        element: <Donation/>
       }
     ]
   }
