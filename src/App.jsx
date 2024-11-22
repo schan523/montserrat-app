@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './styles/App.css'
 import Home from './components/Home.jsx'
 import Navbar from './components/Navbar.jsx'
+import Donation from './components/Donation.jsx'
 import { Outlet } from 'react-router'
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
     <>
       <Navbar />
       <Home />
+      <Donation />
       <Outlet />
     </>
   )
