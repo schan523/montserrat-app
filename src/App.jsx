@@ -7,6 +7,7 @@ import Database from './components/Database.jsx'
 import Donation from './components/Donation.jsx'
 import Updates from './components/Updates.jsx'
 
+
 export default function App() {
   const [count, setCount] = useState(0)
 
@@ -16,7 +17,6 @@ export default function App() {
 
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/database" element={<Database/>}/>
