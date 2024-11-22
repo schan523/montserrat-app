@@ -17,6 +17,7 @@ Get the necessary packages
 npm install
 npm install react-router-dom
 ```
+Make sure to create a branch before making/pushing any changes.<br/>
 Use `npm run dev` in order to locally host the site to see changes as you work.
 
 # For visitors
