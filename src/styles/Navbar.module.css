@@ -2,7 +2,11 @@ nav {
     display: flex;
 }
 
-.navItem {
-    align-items: center;
+ul {
+    display: flex;
+}
+
+li {
     margin: 10px;
+    list-style-type: none;
 }
