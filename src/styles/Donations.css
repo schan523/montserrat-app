@@ -1,0 +1,113 @@
+/* Donations.css */
+
+.container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    height: 100vh; /* Full-page height */
+  }
+  .service-trips .dropdown-container {
+    margin-bottom: 15px; /* Adds gap between dropdown and image */
+  }
+  
+  .service-trips {
+    width: 60%; /* Bigger than the donation section */
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto; /* Scrollable if content overflows */
+  }
+  
+  .service-trips h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .service-trips select {
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .service-trips img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .service-trips p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .donation-tracker {
+    width: 40%; /* Smaller than the service trips section */
+    padding-left: 20px;
+  }
+  
+  .donation-tracker h1,
+  .donation-tracker h2 {
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    background: #ccc;
+    border-radius: 10px;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: green;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    line-height: 30px;
+  }
+  
+  .donation-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .donation-form input,
+  .donation-form select,
+  .donation-form textarea {
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .donation-form {
+    text-align: center; /* Centers text and inline elements like the button */
+  }
+  
+  .donation-form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .donation-form button:hover {
+    background: darkgreen;
+  }
+  
+  .graduation-year-options {
+    display: flex;
+    gap: 15px; /* Space between radio buttons */
+    margin-bottom: 15px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .graduation-year-options label {
+    font-size: 16px;
+  }

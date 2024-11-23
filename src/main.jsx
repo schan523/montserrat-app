@@ -1,8 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import './styles/index.css'
 import App from './App.jsx'
+<<<<<<< HEAD
 import Database from "./components/Database.jsx";
 import Home from "./components/home/Home.jsx";
 import Updates from "./components/Updates.jsx";
@@ -32,9 +33,13 @@ const router = createBrowserRouter([
     ]
   }
 ]);
+=======
+>>>>>>> 4059029d5a9ac3bf64f480f7397e1c8f4afc7d71
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <HashRouter>
+      <App/>
+    </HashRouter>
   </StrictMode>,
 )

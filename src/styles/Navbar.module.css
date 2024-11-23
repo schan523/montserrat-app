@@ -1,8 +1,12 @@
-nav {
+.nav {
+    display: flex;
+}
+
+.ul {
     display: flex;
 }
 
 .navItem {
-    align-items: center;
     margin: 10px;
+    list-style-type: none;
 }
