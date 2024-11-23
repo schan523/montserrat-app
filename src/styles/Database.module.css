@@ -4,4 +4,23 @@
 
 .databaseContainer {
     display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.filterContainer {
+    margin-top: 20px;
+    border: solid;
+}
+
+.statsContainer {
+    margin-top: 20px;
+    border: solid;
+}
+
+.databaseEntries {
+    border: solid;
+}
+
+.search {
+    width: 100%;
 }
