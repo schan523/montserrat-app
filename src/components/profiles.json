@@ -1,39 +1,39 @@
 {
-  "profiles": {
-    "user1": {
+  "profiles": 
+    [{
       "First-Name": "Night",
       "Last-Name": "Wing",
       "BCID": "763190304",
       "email": "Nightwing@Gotham.com",
       "Donation": "1000"
     },
-    "user2": {
+    {
       "First-Name": "Bat",
       "Last-Name": "Man",
       "BCID": "1234056",
       "email": "12342@bc.edu",
       "Donation": "9304"
     },
-    "user3": {
+    {
       "First-Name": "Sunny",
       "Last-Name": "My Guy",
       "BCID": "76312304",
       "email": "makemefree@bc.edu",
       "Donation": "100"
     },
-    "user4": {
+    {
       "First-Name": "Jim",
       "Last-Name": "Larry",
       "BCID": "12310654",
       "email": "makemefree@bc.edu",
       "Donation": ".00000001"
     },
-    "user5": {
+    {
       "First-Name": "Mary",
       "Last-Name": "Jackson",
       "BCID": "2342435",
       "email": "JacksonM@bc.edu",
       "Donation": ".00000001"
     }
-  }
+  ]
 }
