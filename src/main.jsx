@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './styles/index.css'
 import App from './App.jsx'
-import Database from './components/Database.jsx'
-import Home from './components/Home.jsx'
-import Updates from './components/Updates.jsx'
-import Donation from './components/Donation.jsx'
+import Database from "./components/Database.jsx";
+import Home from "./components/home/Home.jsx";
+import Updates from "./components/Updates.jsx";
+import Donation from "./components/Donation.jsx";
 
 const router = createBrowserRouter([
   {
