@@ -8,9 +8,9 @@ export default function Navbar() {
     <nav className="App">
         <ul>
             <li><Link to="">Home</Link></li>
-            <li><Link to="/database">Database</Link></li>
-            <li><Link to="/updates">Updates</Link></li>
-            <li><Link to="/donation">Donation</Link></li>
+            <li><Link to="database">Database</Link></li>
+            <li><Link to="updates">Updates</Link></li>
+            <li><Link to="donation">Donation</Link></li>
         </ul>
     </nav>
 );

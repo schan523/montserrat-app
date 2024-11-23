@@ -18,10 +18,10 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/database" element={<Database/>}/>
-        <Route path="/donation" element={<Donation/>}/>
-        <Route path="/updates" element={<Updates/>}/>
+        <Route path="" element={<Home/>}/>
+        <Route path="database" element={<Database/>}/>
+        <Route path="donation" element={<Donation/>}/>
+        <Route path="updates" element={<Updates/>}/>
       </Routes>
     </>
   )
