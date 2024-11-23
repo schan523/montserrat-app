@@ -9,11 +9,8 @@ import Updates from './components/Updates.jsx'
 
 
 export default function App() {
-  const [count, setCount] = useState(0)
-
-  function renderPage() {
-    
-  }
+  const [count, setCount] = useState(0)    
+  
 
   return (
     <>
@@ -25,6 +22,6 @@ export default function App() {
         <Route path="updates" element={<Updates/>}/>
       </Routes>
     </>
-  )
+  );
 }
 
