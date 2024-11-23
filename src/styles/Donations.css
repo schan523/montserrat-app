@@ -6,6 +6,9 @@
     padding: 20px;
     height: 100vh; /* Full-page height */
   }
+  .service-trips .dropdown-container {
+    margin-bottom: 15px; /* Adds gap between dropdown and image */
+  }
   
   .service-trips {
     width: 60%; /* Bigger than the donation section */
@@ -22,6 +25,7 @@
   .service-trips select {
     padding: 5px;
     margin-left: 10px;
+    margin-bottom: 10px;
     font-size: 16px;
   }
   
@@ -78,6 +82,10 @@
     margin-bottom: 15px;
   }
   
+  .donation-form {
+    text-align: center; /* Centers text and inline elements like the button */
+  }
+  
   .donation-form button {
     padding: 10px 15px;
     font-size: 16px;
@@ -91,6 +99,7 @@
   .donation-form button:hover {
     background: darkgreen;
   }
+  
   .graduation-year-options {
     display: flex;
     gap: 15px; /* Space between radio buttons */
