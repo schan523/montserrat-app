@@ -1,12 +1,12 @@
-nav {
+.nav {
     display: flex;
 }
 
-ul {
+.ul {
     display: flex;
 }
 
-li {
+.navItem {
     margin: 10px;
     list-style-type: none;
 }
