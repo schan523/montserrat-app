@@ -106,8 +106,8 @@ function DonationPage() {
           <label>
             Donation Method:{" "}
             <select name="method" required>
-              <option value="creditCard">Credit Card</option>
-              <option value="paypal">PayPal</option>
+              <option value="Eagle Card">Eagle Card</option>
+              <option value="Credit Card">Credit Card</option>
               <option value="bankTransfer">Bank Transfer</option>
             </select>
           </label>
