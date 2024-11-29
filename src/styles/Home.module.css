@@ -1,0 +1,56 @@
+.leaderboard {
+    --borderRadiusDefault: 1rem;
+    --colorTextDefault: #1c3144;
+    --fontSizeBaseEm: 1.6em;
+    --fontFamilyDefault: "Rockwell", sans-serif;
+    --fontWeightLight: 300;
+    --lineHeightDefault: 1.5;
+    --colorPrimary: #ed2793;
+    --colorGreyLight: #efefef;
+
+    grid-area: leaderboard;
+    border-radius: var(--borderRadiusDefault);
+    background-color: #f8f8f8;
+    color: #333333;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dddddd;
+}
+
+.header {
+    margin: 0;
+    font-size: 2rem;
+    font-family: "Comic Sans MS", cursive;
+    color: var(--colorPrimary);
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Comic Sans MS", cursive;
+}
+
+ol li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    transition: color 0.7s ease;
+}
+
+ol li:nth-child(even) {
+    background-color: var(--colorGreyLight);
+}
+
+ol li span {
+    float: right;
+}
+
+ol li:hover {
+    color: var(--colorPrimary);
+}
+
+@media (min-width: 26.5625em) {
+    .home-page p {
+        margin-bottom: 1.6rem;
+    }
+}
