@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../styles/Home.module.css'; // Adjust the path as necessary
+import styles from '../styles/Home.module.css';
 
 function Leaderboard() {
     const [profiles, setProfiles] = useState([]);
