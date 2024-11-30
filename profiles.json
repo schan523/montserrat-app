@@ -1,0 +1,39 @@
+{
+  "profiles": [
+      {
+          "firstName": "Night",
+          "lastName": "Wing",
+          "BCID": "763190304",
+          "email": "Nightwing@Gotham.com",
+          "Donation": "1000"
+      },
+      {
+          "firstName": "Bat",
+          "lastName": "Man",
+          "BCID": "1234056",
+          "email": "12342@bc.edu",
+          "Donation": "9304"
+      },
+      {
+          "firstName": "Sunny",
+          "lastName": "My Guy",
+          "BCID": "76312304",
+          "email": "makemefree@bc.edu",
+          "Donation": "100"
+      },
+      {
+          "firstName": "Jim",
+          "lastName": "Larry",
+          "BCID": "12310654",
+          "email": "makemefree@bc.edu",
+          "Donation": ".00000001"
+      },
+      {
+          "firstName": "Mary",
+          "lastName": "Jackson",
+          "BCID": "2342435",
+          "email": "JacksonM@bc.edu",
+          "Donation": ".00000001"
+      }
+  ]
+}
