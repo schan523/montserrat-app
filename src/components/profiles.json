@@ -1,39 +1,68 @@
 {
   "profiles": [
     {
-    "firstName": "Night",
-    "lastName": "Wing",
+    "firstName": "Drew",
+    "lastName": "Ferrell",
     "BCID": "763190304",
-    "email": "Nightwing@Gotham.com",
-    "Donation": "1000"
+    "email": "drewf@gmail.com",
+    "donations": [
+      {
+        "time": "10-21-24",
+        "amount": "1000.00"
+      }
+    ]
   },
   {
-    "firstName": "Bat",
-    "lastName": "Man",
+    "firstName": "Deangelo",
+    "lastName": "Moon",
     "BCID": "1234056",
     "email": "12342@bc.edu",
-    "Donation": "9304"
+    "donations": [
+      {
+        "time": "02-14-23",
+        "amount": "9304.00"
+      }, 
+      {
+        "time": "05-01-24",
+        "amount": "10000.00"
+      }
+    ]
   },
   {
     "firstName": "Sunny",
-    "lastName": "My Guy",
+    "lastName": "Chan",
     "BCID": "76312304",
     "email": "makemefree@bc.edu",
-    "Donation": "100"
+    "donations": [
+      {
+        "time": "05-23-24",
+        "amount": "100.00"
+      }
+    ]
   },
   {
     "firstName": "Jim",
     "lastName": "Larry",
     "BCID": "12310654",
     "email": "makemefree@bc.edu",
-    "Donation": ".00000001"
+    "donations": [
+      {
+        "time": "11/30-24",
+        "amount": "0.01"
+      }
+    ]
   },
   {
     "firstName": "Mary",
     "lastName": "Jackson",
     "BCID": "2342435",
     "email": "JacksonM@bc.edu",
-    "Donation": ".00000001"
+    "donations": [
+      {
+        "time": "11-12-24",
+        "amount": "0.01"
+      }
+    ]
   }
 ]
 }
