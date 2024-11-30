@@ -5,9 +5,11 @@ import data from './profiles.json';
 export default function Database() {
   const [isHidden, setIsHidden] = useState(true);
 
+
   let averageAmt = 0;
-  data.profiles.forEach((profile) => {averageAmt += parseInt(profile.donation)});
-  averageAmt = (averageAmt / data.profiles.length).toFixed(2);
+  let leng = 0;
+  data.profiles.forEach((profile) => {profile.donations.map((donation) => {averageAmt += parseFloat(donation.amount); leng++})})
+  averageAmt = (averageAmt / leng).toFixed(2);
 
 
   return (
@@ -28,7 +30,7 @@ export default function Database() {
           <div className={css.statsContainer}>
             <h4>Stats</h4>
             <p>Average Donation Amount: ${averageAmt}</p>
-            <p>Average Donations: </p>
+            <p>Average Donations: {leng / data.profiles.length}</p>
           </div>
         </div>
         <div className={css.databaseEntries}>
@@ -40,7 +42,6 @@ export default function Database() {
               </button>
               {isHidden && (
                 <div className={css.hiddenContent}>
-                  <p>Number of Donations: {profile.donations.length}</p>
                   {profile.donations.map((donation) => {return <p>Date: {donation.time} &nbsp; Amount: {donation.amount}</p>})}
                 </div>)}
             </div>})}
