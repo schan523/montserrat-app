@@ -2,12 +2,34 @@
     margin: 10px;
     display: flex;
     overflow: hidden;
+    flex-direction: column;
 }
 
 .leftContainer {
-    flex: 30%;
+    flex: 100%;
     margin-top: 20px;
     margin-left: 5px;
+}
+
+.databaseEntries {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .leftContainer {
+        flex: 30%;
+    }
+
+    .databaseEntries {
+        flex: 70%;
+    }
 }
 
 .filterContainer {
@@ -21,14 +43,6 @@
     border-radius: 10px;
 }
 
-.databaseEntries {
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    flex: 70%;
-    /* border: solid; */
-}
-
 .search {
     width: 90%;
 }
@@ -37,7 +51,7 @@ li {
     list-style: none;
 }
 
-/* collsible button for triggering hidden content */
+/* Collapsible button for triggering hidden content */
 .collapsible {
     cursor: pointer;
     text-align: left; 

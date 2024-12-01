@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import ProgressBar from '../components/progressBar';
+import { useNavigate } from 'react-router-dom';
 import styles from '../styles/Home.module.css';
 
 function Leaderboard() {
     const [profiles, setProfiles] = useState([]);
     const donationGoal = 50000;
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('profiles.json')
@@ -16,8 +17,7 @@ function Leaderboard() {
                     return totalDonationB - totalDonationA;
                 });
                 setProfiles(sortedProfiles);
-            })
-            .catch(error => console.error('Error fetching profiles:', error));
+            });
     }, []);
 
     const totalDonations = profiles.reduce((sum, profile) => {

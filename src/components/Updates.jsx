@@ -117,6 +117,11 @@ export default function Updates() {
         </div>
         <div className={styles.leaderboardSection}>
           <Leaderboard profiles={profiles} />
+          <div className={`${styles.donationAmount} ${styles.totalDonate}`}>
+            <p>
+              Total Donations: <span className={styles.donationAmountValue}>${roundedTotalDonations}</span>
+            </p>
+          </div>
         </div>
       </div>
       <div className={styles.progressBarSection}>
@@ -124,7 +129,7 @@ export default function Updates() {
         {/* Circular Progress Bar */}
         <ProgressBar type="circular" donationAmount={roundedTotalDonations} goal={donationGoal} label="Current Tracker: 50k Goal" />
         <div className="progress-bars-container">
-          {/* line Progress Bar */}
+          {/* Line Progress Bar */}
           <ProgressBar type="linear" donationAmount={roundedTotalDonations} goal={10000} label="10k Goal" />
           <ProgressBar type="linear" donationAmount={roundedTotalDonations} goal={30000} label="30k Goal" />
           <ProgressBar type="linear" donationAmount={roundedTotalDonations} goal={40000} label="40k Goal" />

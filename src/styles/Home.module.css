@@ -1,4 +1,4 @@
-.leaderboard {
+:root {
     --borderRadiusDefault: 1rem;
     --colorTextDefault: #1c3144;
     --fontSizeBaseEm: 1.6em;
@@ -7,7 +7,9 @@
     --lineHeightDefault: 1.5;
     --colorPrimary: #ed2793;
     --colorGreyLight: #efefef;
+}
 
+.leaderboard {
     grid-area: leaderboard;
     border-radius: var(--borderRadiusDefault);
     background-color: #f8f8f8;
@@ -49,10 +51,32 @@ ol li:hover {
     color: var(--colorPrimary);
 }
 
-@media (min-width: 26.5625em) {
-    .home-page p {
-        margin-bottom: 1.6rem;
+/* responsiveness */
+@media only screen and (min-width: 769px) {
+    .contentContainer {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "leaderboard progressBarSection"
+            "leaderboard progressBarSection"
+            "leaderboard progressBarSection";
+        grid-gap: 15px;
     }
+
+    .section-title {
+        padding: 2%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section-title {
+        padding: 2%;
+    }
+}
+
+.home-page p {
+    margin-bottom: 1.6rem;
 }
 
 .redirectButton {
@@ -66,8 +90,8 @@ ol li:hover {
     background-color: #007bff;
     color: white;
     transition: background-color 0.3s;
-  }
-  
-  .redirectButton:hover {
+}
+
+.redirectButton:hover {
     background-color: #0056b3;
-  }
+}
