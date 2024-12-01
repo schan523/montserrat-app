@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function Leaderboard() {
     const [profiles, setProfiles] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('profiles.json')
@@ -14,6 +16,10 @@ function Leaderboard() {
                 setProfiles(sortedProfiles);
             });
     }, []);
+
+    const handleButtonClick = () => {
+        navigate('/donation');
+    };
 
     return (
         <div className={styles.leaderboard}>
@@ -31,6 +37,9 @@ function Leaderboard() {
                     </li>
                 ))}
             </ol>
+            <button className={styles.redirectButton} onClick={handleButtonClick}>
+                Donate
+            </button>
         </div>
     );
 }
