@@ -31,11 +31,11 @@ function Leaderboard() {
         <div className={styles.leaderboard}>
             <h2 className={styles.header}>Top Donors</h2>
             <ol>
-                {profiles.map((profile, index) => {
+                {profiles.slice(0, 5).map((profile, index) => { //slice to only show top 5 donors
                     const profileTotal = profile.donations.reduce((profileSum, donation) => {
                         return profileSum + parseFloat(donation.amount);
                     }, 0);
-
+    
                     return (
                         <li key={index}>
                             {profile.firstName} {profile.lastName}
