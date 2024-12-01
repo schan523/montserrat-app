@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Leaderboard from './leaderboard';
+import ProgressBar from '../components/progressBar';
 import styles from '../styles/Updates.module.css';
 
 export default function Updates() {
@@ -8,6 +9,31 @@ export default function Updates() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const dropdownRef = useRef(null);
+  const [profiles, setProfiles] = useState([]);
+  const donationGoal = 50000; // Example goal
+
+  useEffect(() => {
+    fetch('profiles.json')
+      .then(response => response.json())
+      .then(data => {
+        const sortedProfiles = Object.values(data.profiles).sort((a, b) => {
+          const totalDonationA = a.donations.reduce((sum, donation) => sum + parseFloat(donation.amount), 0);
+          const totalDonationB = b.donations.reduce((sum, donation) => sum + parseFloat(donation.amount), 0);
+          return totalDonationB - totalDonationA;
+        });
+        setProfiles(sortedProfiles);
+      })
+      .catch(error => console.error('Error fetching profiles:', error));
+  }, []);
+
+  const totalDonations = profiles.reduce((sum, profile) => {
+    const profileTotal = profile.donations.reduce((profileSum, donation) => {
+      return profileSum + parseFloat(donation.amount);
+    }, 0);
+    return sum + profileTotal;
+  }, 0);
+
+  const roundedTotalDonations = parseFloat(totalDonations.toFixed(2));
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -90,7 +116,18 @@ export default function Updates() {
           {renderContent()}
         </div>
         <div className={styles.leaderboardSection}>
-          <Leaderboard />
+          <Leaderboard profiles={profiles} />
+        </div>
+      </div>
+      <div className={styles.progressBarSection}>
+        <h2 className={styles.progressBarTitle}>Goal Tracker:</h2>
+        {/* Circular Progress Bar */}
+        <ProgressBar type="circular" donationAmount={roundedTotalDonations} goal={donationGoal} label="Current Tracker: 50k Goal" />
+        <div className="progress-bars-container">
+          {/* line Progress Bar */}
+          <ProgressBar type="linear" donationAmount={roundedTotalDonations} goal={10000} label="10k Goal" />
+          <ProgressBar type="linear" donationAmount={roundedTotalDonations} goal={30000} label="30k Goal" />
+          <ProgressBar type="linear" donationAmount={roundedTotalDonations} goal={40000} label="40k Goal" />
         </div>
       </div>
     </div>
