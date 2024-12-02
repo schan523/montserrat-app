@@ -3,6 +3,12 @@
     display: flex;
     overflow: hidden;
     flex-direction: column;
+    font-family: "Comic Sans MS", sans-serif;
+
+}
+
+h2 {
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 .leftContainer {
@@ -45,6 +51,7 @@
 
 .search {
     width: 90%;
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 li {
