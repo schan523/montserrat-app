@@ -1,6 +1,7 @@
 .nav {
     display: flex;
     font-family: "Comic Sans MS", sans-serif;
+    justify-content: center;
 }
 
 .ul {
