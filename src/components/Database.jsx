@@ -3,14 +3,19 @@ import css from "../styles/Database.module.css";
 import data from './profiles.json';
 
 export default function Database() {
-  const [isHidden, setIsHidden] = useState(true);
-
+  const entryLength = data.profiles.length;
+  const [isHidden, setIsHidden] = useState(Array(entryLength).fill(false));
 
   let averageAmt = 0;
   let leng = 0;
   data.profiles.forEach((profile) => {profile.donations.map((donation) => {averageAmt += parseFloat(donation.amount); leng++})})
   averageAmt = (averageAmt / leng).toFixed(2);
 
+  function changeEntry(ind) {
+    const newArr = [...isHidden]
+    newArr[ind] = !newArr[ind];
+    setIsHidden(newArr);
+  }
 
   return (
     <div>
@@ -35,12 +40,12 @@ export default function Database() {
         </div>
         <div className={css.databaseEntries}>
           <h2>Entries</h2>
-          {data.profiles.map((profile) => {
+          {data.profiles.map((profile, ind) => {
             return <div key={profile.BCID}>
-              <button type="button" className={css.collapsible} onClick={(() => {setIsHidden(!isHidden)})}>
+              <button type="button" className={css.collapsible} onClick={() => changeEntry(ind)}>
                 Name: {profile.firstName} {profile.lastName} &nbsp; {profile.donations.length}
               </button>
-              {isHidden && (
+              {isHidden[ind] && (
                 <div className={css.hiddenContent}>
                   {profile.donations.map((donation) => {return <p>Date: {donation.time} &nbsp; Amount: {donation.amount}</p>})}
                 </div>)}
