@@ -1,3 +1,6 @@
+* {
+  font-family: "Comic Sans MS", sans-serif;
+}
 .pageContainer {
   display: flex;
   flex-direction: column;
@@ -149,6 +152,7 @@
   text-align: left;
   line-height: 3.5rem;
   padding: 10px;
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 .progress-bar-wrapper {
