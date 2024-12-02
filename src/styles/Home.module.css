@@ -23,6 +23,7 @@
     padding: 15px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #dddddd;
+    margin-bottom: 20px;
 }
 
 .heading {
@@ -34,10 +35,12 @@
 }
 
 .image {
-    width: 462px;
-    height: 288px;
+    width: 100%;
+    max-width: 462px;
+    height: auto;
+    max-height: 288px;
     border-radius: 0.5rem;
-    object-fit: contain; /* Scale the image */
+    object-fit: contain;
     background-color: #f8f8f8;
 }
 
@@ -138,6 +141,10 @@ ol li:hover {
 
     .section-title {
         padding: 2%;
+    }
+
+    .donateMessage {
+        font-size: 20px;
     }
 }
 
