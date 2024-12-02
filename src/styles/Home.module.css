@@ -30,7 +30,7 @@
     color: #ed2793;
     margin-top: 10px;
     margin-bottom: 5px;
-    font-family: "Rockwell", sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 .image {
@@ -45,7 +45,7 @@
     margin-top: 10px;
     font-size: 16px;
     color: #1c3144;
-    font-family: "Rockwell", sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 .donateMessage {
@@ -64,6 +64,7 @@
     padding: 15px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #dddddd;
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 .header {

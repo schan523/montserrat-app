@@ -33,7 +33,7 @@
   font-size: 30px;
   margin-bottom: 10px;
   text-align: left;
-  font-family: "Rockwell", sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 .dropdown {
@@ -65,7 +65,7 @@
   padding: 8px 12px;
   cursor: pointer;
   font-size: 14px;
-  font-family: "Rockwell", sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 .dropdownMenu li:hover {
@@ -82,7 +82,7 @@
   transition: background-color 0.3s;
   margin-bottom: 10px;
   color: white;
-  font-family: "Rockwell", sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   width: auto;
 }
 
@@ -124,7 +124,7 @@
 .optionDescription {
   color: #1c3144;
   font-size: 16px;
-  font-family: "Rockwell", sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   margin-top: 10px;
 }
 

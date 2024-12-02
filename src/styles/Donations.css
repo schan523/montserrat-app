@@ -2,7 +2,7 @@
 
 .container {
   display: flex;
-  font-family: Arial, sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   padding: 20px;
   flex-direction: column;
   justify-content: center;
