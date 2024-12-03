@@ -3,28 +3,56 @@ import css from "../styles/Database.module.css";
 import data from './profiles.json';
 
 export default function Database() {
-  const [isHidden, setIsHidden] = useState(true);
-
+  const entryLength = data.profiles.length;
+  const [isHidden, setIsHidden] = useState(Array(entryLength).fill(false));
+  const [filtered, setFiltered] = useState(data.profiles);
 
   let averageAmt = 0;
   let leng = 0;
   data.profiles.forEach((profile) => {profile.donations.map((donation) => {averageAmt += parseFloat(donation.amount); leng++})})
   averageAmt = (averageAmt / leng).toFixed(2);
 
+  function changeEntry(ind) {
+    const newArr = [...isHidden]
+    newArr[ind] = !newArr[ind];
+    setIsHidden(newArr);
+  }
+
+  const search = (e) => {
+    const filteredItems = data.profiles.filter((profile) => 
+      profile.firstName.includes(e.target.value) || profile.lastName.includes(e.target.value));
+    setFiltered(filteredItems);
+  }
+
+  const sortAmt = () => {
+    const list = [...filtered];
+    const byAmt = list.sort((a, b) => b.donationTotal - a.donationTotal);
+    setFiltered(byAmt);
+  }
+  
+  const sortA = () => {
+    const list = [...filtered];
+    const alphabetical = list.sort((a, b) => {
+      return (a.lastName < b.lastName) ? -1 : (a.lastName > b.lastName) ? 1 : 0;
+    });
+    console.log(alphabetical);
+    setFiltered(alphabetical);
+    console.log(filtered);
+  }
 
   return (
     <div>
       <h2>Database</h2>
-      <input className={css.search} type="search" placeholder="Search" />
+      <input className={css.search} type="search" onChange={search} placeholder="Search" />
       <div className={css.container}>
         <div className={css.leftContainer}>
           <div className={css.filterContainer}>
             <p>Filter by:</p>
             <input type="checkbox" id="recent" />
             <span>Recent</span> <br />
-            <input type="checkbox" id="amt" />
+            <input type="checkbox" id="amt" onChange={sortAmt} />
             <span>Amount</span> <br />
-            <input type="checkbox" id="alphabetical" />
+            <input type="checkbox" id="alphabetical" onChange={sortA}/>
             <span>Alphabetical</span>
           </div>
           <div className={css.statsContainer}>
@@ -35,12 +63,12 @@ export default function Database() {
         </div>
         <div className={css.databaseEntries}>
           <h2>Entries</h2>
-          {data.profiles.map((profile) => {
+          {filtered.map((profile, ind) => {
             return <div key={profile.BCID}>
-              <button type="button" className={css.collapsible} onClick={(() => {setIsHidden(!isHidden)})}>
+              <button type="button" className={css.collapsible} onClick={() => changeEntry(ind)}>
                 Name: {profile.firstName} {profile.lastName} &nbsp; {profile.donations.length}
               </button>
-              {isHidden && (
+              {isHidden[ind] && (
                 <div className={css.hiddenContent}>
                   {profile.donations.map((donation) => {return <p>Date: {donation.time} &nbsp; Amount: {donation.amount}</p>})}
                 </div>)}
