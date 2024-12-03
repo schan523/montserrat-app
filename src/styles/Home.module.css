@@ -160,11 +160,11 @@ ol li:hover {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #b29d6c;
     color: white;
     transition: background-color 0.3s;
 }
 
 .redirectButton:hover {
-    background-color: #0056b3;
+    background-color: #b29d6c;
 }
