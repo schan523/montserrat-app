@@ -42,7 +42,7 @@ export default function Database() {
       } else if (a.slice(0, 2) > b.slice(0, 2)) {
         return 1;
       } else {
-          return -1 ? (a.slice(3, 4) < b.slice(3, 4)) : 1 ? (a.slice(3, 4) > b.slice(3, 4)) : 0;
+          return (a.slice(3, 5) < b.slice(3, 5)) ? -1 : (a.slice(3, 5) > b.slice(3, 5)) ? 1 : 0;
         }
     }
   }
@@ -70,8 +70,6 @@ export default function Database() {
     });
     setFiltered(alphabetical);
   }
-
-  console.log(data.profiles[0].donations[0].time[2]);
 
   return (
     <div>
