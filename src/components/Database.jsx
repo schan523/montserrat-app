@@ -20,7 +20,7 @@ export default function Database() {
 
   const search = (e) => {
     const filteredItems = data.profiles.filter((profile) => 
-      profile.firstName.includes(e.target.value) || profile.lastName.includes(e.target.value));
+      profile.firstName.toLowerCase().includes(e.target.value.toLowerCase()) || profile.lastName.toLowerCase().includes(e.target.value.toLowerCase()));
     setFiltered(filteredItems);
   }
 
