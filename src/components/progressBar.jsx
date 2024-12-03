@@ -2,8 +2,7 @@ import React from 'react';
 import '../styles/progressBar.css';
 
 const ProgressBar = ({ type, donationAmount = 0, goal = 1, label }) => {
-    const progress = goal > 0 ? (donationAmount / goal) * 100 : 0;
-    console.log(`Donation Amount: ${donationAmount}, Goal: ${goal}, Progress: ${progress.toFixed(2)}%`);
+    const progress = Math.min(100, goal > 0 ? (donationAmount / goal) * 100 : 0);
 
     const isComplete = progress >= 100;
     const progressBarStyle = {
@@ -18,12 +17,11 @@ const ProgressBar = ({ type, donationAmount = 0, goal = 1, label }) => {
                 <div
                     className="progress-bar-container"
                     role="progressbar"
-                    aria-valuenow={progress.toFixed(2)}
+                    aria-valuenow={isComplete ? 100 : progress.toFixed(2)}
                     aria-valuemin="0"
                     aria-valuemax="100"
                     style={{ '--progress': `${progress}%` }}
                 >
-                    {isComplete && <span>Completed</span>}
                 </div>
             ) : (
                 <div className="progress-bar-wrapper">
