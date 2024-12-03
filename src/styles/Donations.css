@@ -19,7 +19,7 @@
   justify-content: center; /* Center items vertically */
   align-items: center; /* Center items horizontally */
   background-color: #efefef;
-  color: #ed2793;
+  color: #8a100b;
   padding: 15px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
@@ -59,7 +59,7 @@
 .donation-form button {
   padding: 10px 15px;
   font-size: 16px;
-  background: #ed2793;
+  background: #8a100b;
   color: white;
   border: none;
   border-radius: 5px;
@@ -67,7 +67,7 @@
 }
 
 .donation-form button:hover {
-  background: #dd248a;
+  background: #8a100b;
 }
 
 .graduation-year-options {

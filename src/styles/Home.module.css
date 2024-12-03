@@ -28,7 +28,7 @@
 
 .heading {
     font-size: 18px;
-    color: #ed2793;
+    color: #8a100b;
     margin-top: 10px;
     margin-bottom: 5px;
     font-family: "Comic Sans MS", sans-serif;
@@ -74,7 +74,7 @@
     margin-bottom: 10px;
     font-size: 2rem;
     font-family: "Comic Sans MS", sans-serif;
-    color: #ed2793;
+    color: #8a100b;
 }
 
 ol {
@@ -99,7 +99,7 @@ ol li span {
 }
 
 ol li:hover {
-    color: #ed2793;
+    color: #760c09;
 }
 
 .contentWrapper {
