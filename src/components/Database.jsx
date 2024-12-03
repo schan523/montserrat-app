@@ -30,14 +30,45 @@ export default function Database() {
     setFiltered(byAmt);
   }
   
+  // helper functions
+  function compare(a, b) {
+    if (a.slice(-2) < b.slice(-2)) {
+      return -1;
+    } else if (a.slice(-2) > b.slice(-2)) {
+      return 1;
+    } else {
+      if (a.slice(0, 2) < b.slice(0, 2)) {
+        return -1;
+      } else if (a.slice(0, 2) > b.slice(0, 2)) {
+        return 1;
+      } else {
+          return (a.slice(3, 5) < b.slice(3, 5)) ? -1 : (a.slice(3, 5) > b.slice(3, 5)) ? 1 : 0;
+        }
+    }
+  }
+
+  function mostRecent(donations) {
+    let result = donations[0].time;
+    for (let donation of donations) {
+      if (compare(result, donation.time) == -1) {
+        result = donation.time;
+      }
+    }
+    return result;
+  }
+
+  const sortRecent = () => {
+    const list = [...filtered];
+    const byRecent = list.sort((a, b) => compare(mostRecent(a.donations), mostRecent(b.donations))).reverse();
+    setFiltered(byRecent);
+  }
+
   const sortA = () => {
     const list = [...filtered];
     const alphabetical = list.sort((a, b) => {
       return (a.lastName < b.lastName) ? -1 : (a.lastName > b.lastName) ? 1 : 0;
     });
-    console.log(alphabetical);
     setFiltered(alphabetical);
-    console.log(filtered);
   }
 
   return (
@@ -48,7 +79,7 @@ export default function Database() {
         <div className={css.leftContainer}>
           <div className={css.filterContainer}>
             <p>Filter by:</p>
-            <input type="checkbox" id="recent" />
+            <input type="checkbox" id="recent" onChange={sortRecent}/>
             <span>Recent</span> <br />
             <input type="checkbox" id="amt" onChange={sortAmt} />
             <span>Amount</span> <br />
